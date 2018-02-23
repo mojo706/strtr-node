@@ -1,2 +1,2 @@
 # strtr-node
-Learning node, express, sequelize
+Learning node, express, sequelize by building a `Todo` API
