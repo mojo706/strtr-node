@@ -27,10 +27,7 @@ module.exports = {
         }
 
         return todoItem
-          .update({
-            content: req.body.content || todoItem.content,
-            complete: req.body.complete || todoItem.complete,
-          })
+          .update(req.body, { fields: Object.keys(req.body) })
           .then(updatedTodoItem => res.status(200).send(updatedTodoItem))
           .catch(error => res.status(400).send(error));
       })
